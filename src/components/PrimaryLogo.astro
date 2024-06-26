@@ -4,7 +4,7 @@ const { title, logo } = Astro.props;
 
 <div>
     <a href="/">
-        { !logo && <h1>{title}</h1> }
+        { !logo && <h1 class="sd-site-title">{title}</h1> }
         { logo && 
                 <img alt={title} src={logo} class="object-contain h-20"/> 
         }    

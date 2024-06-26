@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import BlogGrid from '../components/BlogGrid.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+---
+
+<!doctype html>
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<section class="container mx-auto">
+		<h1>Top Local Stories</h1>
+		<BlogGrid national={false} />
+	</section>
+</Base>

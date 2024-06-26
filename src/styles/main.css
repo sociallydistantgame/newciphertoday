@@ -29,7 +29,6 @@
 
 
 body {
-    @apply text-lg;
     @apply bg-gray-950;
     @apply text-gray-50
 }
@@ -46,6 +45,31 @@ dd {
 
 article a, footer a {
     @apply font-semibold underline text-blue-400 transition duration-200 hover:text-white;
+}
+
+.sd-site-title {
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.sd-news-category {
+    text-transform: uppercase;
+    background-color: #FA2828;
+
+    @apply p-1;
+}
+
+.sd-header-links a {
+    text-transform: uppercase;
+    opacity: 70%;
+    color: white;
+}
+
+.sd-header-links a.active {
+    text-transform: uppercase;
+    opacity: 100%;
+    color: white;
+    text-decoration: none !important;
 }
 
 a.button {

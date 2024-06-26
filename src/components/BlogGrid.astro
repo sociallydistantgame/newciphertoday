@@ -7,13 +7,13 @@ const posts = (await getCollection('blog')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-const { limit = posts.length } = Astro.props;
+const { limit = posts.length, local = true, national = true } = Astro.props;
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-3">
     {
-        posts.slice(0, limit).map((post) => (
-                <Post url={`/devlogs/${post.slug}/`} title={post.data.title} description={post.data.description} image={post.data.heroImage}>
+        posts.filter(post => post.data.national && national || !post.data.national && local).slice(0, limit).map((post) => (
+                <Post url={`/news/${post.slug}/`} title={post.data.title} description={post.data.description} image={post.data.heroImage}>
                     <FormattedDate date={post.data.pubDate} />
                 </Post>
         ))
