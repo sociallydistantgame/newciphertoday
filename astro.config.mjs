@@ -7,7 +7,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://sociallydistantgame.com/newciphertoday',
+  site: 'https://newciphertoday.com/',
   markdown: {
     shikiConfig: {
       theme: 'min-dark',
